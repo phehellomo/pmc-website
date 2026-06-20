@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phehello Molise Consultants — Deep-Tech Innovation from Sebokeng</title>
+<style>
+  :root{
+    --soil: #1c1810;
+    --clay: #b5562f;
+    --water: #2e6e6e;
+    --quartz: #e8e1d3;
+    --paper: #f6f2e8;
+    --ink: #211d16;
+    --gold: #c89a3c;
+    --line: rgba(28,24,16,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: 'Iowan Old Style', 'Georgia', serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,.eyebrow,.stat-label{font-family:'Helvetica Neue',Arial,sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  a{color:inherit;}
+
+  /* HERO */
+  header.hero{
+    position:relative;
+    background:var(--soil);
+    color:var(--quartz);
+    overflow:hidden;
+    padding:140px 0 110px;
+  }
+  header.hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 18% 30%, rgba(46,110,110,0.35), transparent 45%),
+      radial-gradient(circle at 82% 70%, rgba(200,154,60,0.22), transparent 50%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:12px;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .logo-bar{display:flex;align-items:center;gap:16px;margin-bottom:46px;}
+  .logo-mark{position:relative;width:54px;height:54px;flex-shrink:0;perspective:300px;}
+  .globe-svg{position:absolute;inset:0;width:100%;height:100%;animation:spin-globe 7s linear infinite;transform-style:preserve-3d;}
+  .globe-ring{fill:none;stroke:var(--water);stroke-width:2.4;}
+  .globe-ring.thin{stroke:var(--water);stroke-width:1.4;opacity:0.75;}
+  .arrow-svg{position:absolute;inset:0;width:100%;height:100%;}
+  .arrow-path{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+  @keyframes spin-globe{
+    0%{transform:rotateY(0deg);}
+    100%{transform:rotateY(360deg);}
+  }
+  .logo-word{display:flex;flex-direction:column;line-height:1.3;}
+  .logo-name{font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.02em;color:var(--quartz);}
+  .logo-slogan{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11.5px;letter-spacing:0.04em;color:var(--gold);font-style:italic;}
+  h1.title{
+    font-size:clamp(38px,6vw,64px);
+    line-height:1.05;
+    margin:0 0 22px;
+    max-width:14ch;
+    font-weight:400;
+    font-family:'Iowan Old Style','Georgia',serif;
+  }
+  h1.title em{font-style:italic;color:var(--gold);}
+  .hero-sub{
+    font-size:18px;
+    max-width:54ch;
+    color:rgba(232,225,211,0.82);
+    margin-bottom:34px;
+  }
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;}
+  .badge{
+    border:1px solid rgba(232,225,211,0.3);
+    padding:6px 14px;
+    border-radius:100px;
+    font-size:12px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    letter-spacing:0.03em;
+    color:rgba(232,225,211,0.9);
+  }
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:2px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:14px;
+    letter-spacing:0.02em;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .btn-primary{background:var(--gold);color:var(--soil);}
+  .btn-ghost{border:1px solid rgba(232,225,211,0.4);color:var(--quartz);}
+
+  /* SECTIONS */
+  section{padding:90px 0;border-top:1px solid var(--line);}
+  .section-head{max-width:62ch;margin-bottom:48px;}
+  .section-head .eyebrow{color:var(--clay);}
+  .section-head h2{
+    font-size:clamp(28px,3.6vw,38px);
+    font-weight:400;
+    margin:0 0 14px;
+  }
+  .section-head p{color:#4a4438;font-size:16px;}
+
+  /* PRINCIPLE BAND */
+  .principle{
+    background:var(--water);
+    color:var(--paper);
+  }
+  .principle .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  .principle h2{font-size:30px;font-weight:400;margin:0 0 16px;}
+  .principle p{color:rgba(246,242,232,0.88);}
+  .principle .num{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold);
+    margin-bottom:10px;
+  }
+  .flow-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .flow-list li{
+    border-left:2px solid var(--gold);
+    padding-left:16px;
+    font-size:15px;
+  }
+
+  /* FOUNDER */
+  .founder-grid{display:grid;grid-template-columns:280px 1fr;gap:56px;}
+  .founder-photo{
+    aspect-ratio:3/4;
+    background:linear-gradient(160deg,var(--clay),var(--soil));
+    border-radius:2px;
+    display:flex;align-items:flex-end;
+    padding:20px;
+  }
+  .founder-photo span{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:rgba(246,242,232,0.85);
+    font-size:12px;letter-spacing:0.04em;
+  }
+  .timeline{margin-top:26px;display:flex;flex-direction:column;gap:18px;}
+  .timeline-item{display:grid;grid-template-columns:110px 1fr;gap:18px;font-size:14.5px;}
+  .timeline-item .yrs{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--clay);font-weight:600;font-size:13px;}
+  blockquote{
+    font-style:italic;
+    font-size:19px;
+    border-left:3px solid var(--clay);
+    padding-left:22px;
+    margin:30px 0;
+    color:#332c1f;
+  }
+  blockquote cite{display:block;margin-top:10px;font-style:normal;font-size:13px;font-family:'Helvetica Neue',Arial,sans-serif;color:#7a715d;}
+
+  /* INNOVATIONS */
+  .innov-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .portfolio-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:3px solid var(--water);
+    padding:20px 22px;
+    border-radius:2px;
+  }
+  .portfolio-card .pt{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:11px;color:#9a8f76;letter-spacing:0.05em;margin-bottom:6px;
+  }
+  .portfolio-card h3{font-size:16px;margin:0 0 8px;font-weight:600;font-family:'Helvetica Neue',Arial,sans-serif;}
+  .portfolio-card p{font-size:13.5px;color:#41392b;margin:0;}
+  .innov-card{
+    background:var(--quartz);
+    padding:30px;
+    border-radius:2px;
+    border-top:3px solid var(--water);
+  }
+  .innov-card:nth-child(2){border-top-color:var(--gold);}
+  .innov-card:nth-child(3){border-top-color:var(--clay);}
+  .innov-card:nth-child(4){border-top-color:#5a6b3f;}
+  .innov-card .pt{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:11.5px;color:#7a715d;letter-spacing:0.04em;margin-bottom:10px;
+  }
+  .innov-card h3{font-size:20px;margin:0 0 12px;font-weight:600;font-family:'Helvetica Neue',Arial,sans-serif;}
+  .innov-card p{font-size:14.5px;color:#41392b;margin:0 0 16px;}
+  .innov-stats{display:flex;gap:18px;font-family:'Helvetica Neue',Arial,sans-serif;}
+  .innov-stats div{font-size:12px;color:#7a715d;}
+  .innov-stats strong{display:block;font-size:16px;color:var(--soil);}
+
+  /* MODEL TABLE */
+  table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);}
+  th{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#7a715d;font-weight:600;}
+  tr:last-child td{font-weight:700;border-bottom:none;}
+
+  /* IMPACT STATS */
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stat{padding:26px 10px;background:var(--soil);color:var(--quartz);border-radius:2px;}
+  .stat .stat-num{font-size:30px;color:var(--gold);font-weight:600;}
+  .stat-label{font-size:12px;letter-spacing:0.03em;color:rgba(232,225,211,0.7);margin-top:6px;}
+
+  /* CONTACT */
+  footer{background:var(--soil);color:var(--quartz);padding:70px 0 40px;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:50px;}
+  footer h2{font-weight:400;font-size:30px;margin:0 0 16px;}
+  footer a.email{color:var(--gold);text-decoration:none;font-size:18px;}
+  .contact-detail{font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(232,225,211,0.75);margin-top:18px;line-height:1.8;}
+  .fine{border-top:1px solid rgba(232,225,211,0.15);padding-top:24px;font-size:12px;font-family:'Helvetica Neue',Arial,sans-serif;color:rgba(232,225,211,0.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:760px){
+    .principle .wrap, .founder-grid, .innov-grid, .contact-grid, .portfolio-grid{grid-template-columns:1fr;}
+    .stat-grid{grid-template-columns:1fr 1fr;}
+    header.hero{padding:100px 0 80px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="logo-bar">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="globe-svg">
+          <circle cx="50" cy="50" r="40" class="globe-ring"/>
+          <ellipse cx="50" cy="50" rx="40" ry="16" class="globe-ring thin"/>
+          <ellipse cx="50" cy="50" rx="16" ry="40" class="globe-ring thin"/>
+          <line x1="10" y1="50" x2="90" y2="50" class="globe-ring thin"/>
+        </svg>
+        <svg viewBox="0 0 100 100" class="arrow-svg">
+          <path d="M20 80 L80 20 M52 20 H80 V48" class="arrow-path"/>
+        </svg>
+      </div>
+      <div class="logo-word">
+        <span class="logo-name">Phehello Molise Consultants</span>
+        <span class="logo-slogan">Reliable Work. Real Solutions. Every Day.</span>
+      </div>
+    </div>
+    <div class="eyebrow">Sebokeng, Zone 10 — Gauteng, South Africa</div>
+    <h1 class="title">Twelve patents, built<br>by a township <em>attorney</em><br>turned farmer turned inventor.</h1>
+    <p class="hero-sub">Phehello Molise Consultants partners with development funders to commercialise a deep-tech IP portfolio spanning security, energy, digital technology, water and sanitation, and waste valorisation — through a model where the funder pays every supplier directly and zero capital touches the company.</p>
+    <div class="badge-row">
+      <span class="badge">100% Black-Owned</span>
+      <span class="badge">Level 1 B-BBEE</span>
+      <span class="badge">Reg. 2024/208180/07</span>
+      <span class="badge">12 Provisional Patents · ~R100M</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#innovations">View the Innovations</a>
+      <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<section class="principle">
+  <div class="wrap">
+    <div>
+      <div class="num">Two Ways to Partner</div>
+      <h2>Fund us directly, or fund the work directly — your choice.</h2>
+      <p>The company invites institutions to provide funds or grants for the development, validation, testing, prototyping, and commercialisation of its innovations. This can happen in whichever manner the funding institution prefers — either as a direct disbursement, or through a partnership model in which the funder takes responsibility for paying engineers, specialists, IP attorneys, certification bodies, and all other service providers directly.</p>
+    </div>
+    <ul class="flow-list">
+      <li>Where preferred, the funder pays directly as bridging finance, a loan, or an inventor's fee to the company.</li>
+      <li>In the partnership model, the funder covers the Director's salary, car allowance, and fuel allowance.</li>
+      <li>The funder also covers the accountant/admin salary, one project manager per project, and two general workers per project.</li>
+      <li>All engineers, specialists, IP attorneys, and certification costs are paid directly to the service providers — never through the company.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="patent-validation">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Due-Diligence Ready</div>
+      <h2>Every patent has already been independently researched.</h2>
+      <p>More than ten of the company's registered provisional patents have been properly researched and documented across seven dimensions, so funders can move straight to due diligence rather than starting from scratch:</p>
+    </div>
+    <ul class="flow-list" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <li>Scientific functionality endorsement</li>
+      <li>Technical specifications</li>
+      <li>Patentability in South Africa and abroad</li>
+      <li>Hypothecability and attachability under section 60 of the Patents Act 57 of 1978</li>
+      <li>Technical feasibility</li>
+      <li>Market feasibility</li>
+      <li>Profitability</li>
+    </ul>
+  </div>
+</section>
+
+<section id="objectives">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our Objectives</div>
+      <h2>Engineering solutions for South Africa's hardest infrastructure gaps.</h2>
+      <p>Phehello Molise Consultants exists to research, patent, and commercialise practical technologies that close the gap between South Africa's infrastructure needs and what is currently available. Every innovation in the portfolio began as a real, lived problem — not a theoretical brief — which is why each one is built to be reliable, affordable, and immediately useful to the households and communities who need it most. The company's focus spans five priority areas:</p>
+    </div>
+    <div class="innov-grid">
+      <div class="innov-card">
+        <h3>Security</h3>
+        <p>Developing intelligent, retrofit-friendly security and protective technologies that respond to real risks facing households, public spaces, farms, and critical assets.</p>
+      </div>
+      <div class="innov-card">
+        <h3>Energy</h3>
+        <p>Designing next-generation, AI-enhanced clean energy systems that reduce dependence on an unreliable grid and put resilient power within reach of homes, farms, and industry.</p>
+      </div>
+      <div class="innov-card">
+        <h3>Digital Technology</h3>
+        <p>Embedding AI, sensing, and digital intelligence into physical infrastructure so that systems monitor, adapt, and improve themselves over time — and resist the piracy and hacking risks facing ordinary households.</p>
+      </div>
+      <div class="innov-card">
+        <h3>Water &amp; Sanitation</h3>
+        <p>Building low-cost, low-maintenance systems that recycle, generate, and purify water for households and communities where conventional infrastructure falls short.</p>
+      </div>
+    </div>
+    <p style="margin-top:24px;font-size:15px;color:#41392b;max-width:70ch;">A further, cross-cutting objective is the <strong>valorisation of waste</strong> — turning wastewater, organic, and other waste streams into reusable water, energy, or material value — together with continued research into other deep-technology solutions that serve South Africa's developmental priorities.</p>
+    <p style="margin-top:18px;font-size:15px;color:#41392b;max-width:70ch;">These are not abstract goals. They are the company's response to problems its own Director has lived through directly — and that is the motivation behind every patent in the portfolio: to do good, reliable work that solves practical, daily problems for South Africans.</p>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Director &amp; Inventor</div>
+      <h2>Mr Phehello JL Molise</h2>
+      <p>A director with extensive experience in legal practice and farming, and an innovator who has researched and registered more than 10 provisional patents in the name of the company.</p>
+    </div>
+    <div class="founder-grid">
+      <div class="founder-photo"><span>Director, Phehello Molise Consultants (Pty) Ltd</span></div>
+      <div>
+        <blockquote>
+          I did not invent these things to make money. I invented them because I lived every one of these problems myself — and I could not keep watching without doing something about it.
+          <cite>— Mr PJL Molise</cite>
+        </blockquote>
+        <div class="timeline">
+          <div class="timeline-item"><span class="yrs">1999–2021</span><span>Retired attorney of the High Court of South Africa — 22 years of legal practice.</span></div>
+          <div class="timeline-item"><span class="yrs">Farming</span><span>Emerging farmer of Pure Breed Bonsmara cattle. After his cattle were stolen and his farm vandalised, he turned that experience directly into his security innovations.</span></div>
+          <div class="timeline-item"><span class="yrs">Sebokeng</span><span>Living through load-shedding, sewerage spillages, and grey water runoff first-hand led directly to his water and energy efficiency inventions.</span></div>
+          <div class="timeline-item"><span class="yrs">Digital</span><span>Personal experience of decoder piracy and hacking shaped his digital technology and security innovations.</span></div>
+          <div class="timeline-item"><span class="yrs">2024–Present</span><span>Director &amp; Inventor, Phehello Molise Consultants — more than 10 provisional patents filed without institutional support.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="innovations">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Portfolio</div>
+      <h2>The flagship four.</h2>
+      <p>These four lead the current funding proposals — each addresses a specific Gauteng infrastructure failure, designed from lived experience, not a laboratory brief.</p>
+    </div>
+    <div class="innov-grid">
+      <div class="innov-card">
+        <div class="pt">PT. 2026/00344 — Water Security</div>
+        <h3>Grey Water Recycling System</h3>
+        <p>Passive, gravity-fed, no electricity or pump. Retrofits to standard plumbing in resource-constrained homes, saving 30–60 litres of potable water per household per day.</p>
+        <div class="innov-stats">
+          <div><strong>R42M+</strong>5-yr revenue</div>
+          <div><strong>R2.5–4.5M</strong>dev. cost</div>
+        </div>
+      </div>
+      <div class="innov-card">
+        <div class="pt">PT. 2025/10983 — Clean Energy</div>
+        <h3>Quantum-AI Solar Panel</h3>
+        <p>Self-healing perovskite-quantum dot cells with AI optimisation, active thermal management, and direct DC delivery — engineered against Gauteng's load-shedding reality.</p>
+        <div class="innov-stats">
+          <div><strong>R55M+</strong>5-yr revenue</div>
+          <div><strong>R8–15M</strong>dev. cost</div>
+        </div>
+      </div>
+      <div class="innov-card">
+        <div class="pt">PT. 2025/09616 — Public Health</div>
+        <h3>Hygienix Antimicrobial Surface</h3>
+        <p>Self-powered, kinetic and light-harvesting retrofit for door handles and hospital bed frames — UV-C, 405nm light, and a pathogen-trapping nano-membrane, no batteries.</p>
+        <div class="innov-stats">
+          <div><strong>R27.3M+</strong>5-yr revenue</div>
+          <div><strong>R2.5–5M</strong>dev. cost</div>
+        </div>
+      </div>
+      <div class="innov-card">
+        <div class="pt">PT. 2026/04173 — Water-Energy Nexus</div>
+        <h3>TermiAqua PVT Panel</h3>
+        <p>One panel, two outputs: quantum-enhanced electricity generation and biomimetic atmospheric water harvesting, inspired by the Namib fog beetle.</p>
+        <div class="innov-stats">
+          <div><strong>R54.75M+</strong>5-yr revenue</div>
+          <div><strong>R7–14M</strong>dev. cost</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="full-portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Full IP Portfolio</div>
+      <h2>Ten registered innovations, one inventor.</h2>
+      <p>Beyond the flagship four, the company's portfolio extends across security, digital surveillance, smart infrastructure, and agricultural technology — all filed in the name of Phehello Molise Consultants (Pty) Ltd.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/10983</div>
+        <h3>Molise Quantum-AI Solar Panel</h3>
+        <p>Self-healing, AI-optimised perovskite-quantum dot solar cells with active thermal management and direct DC power delivery.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/09615</div>
+        <h3>PMC Bio-Nano-AI Sewer Valorisation System</h3>
+        <p>Retrofit circumferential UV disinfection ring with a direct potable reuse extension module, turning municipal wastewater into a recoverable resource.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/09616</div>
+        <h3>Hygienix Antimicrobial Surface System</h3>
+        <p>Self-powered, dual-mode light emission and pathogen-trapping nano-membrane for door handles and hospital bed frames.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/09614</div>
+        <h3>Universal Drone Security Retrofit Module</h3>
+        <p>AI-driven, multi-target non-lethal deterrent module for commercial drones, with two-way voice interrogation, night vision, and autonomous patrol.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/09617</div>
+        <h3>Molise SecureSmart Pavers</h3>
+        <p>Multi-functional interlocking smart paving bricks with embedded sensing and security intelligence for public and private infrastructure.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/09689</div>
+        <h3>Multi-Threat Disorientation Torch (PMDT)</h3>
+        <p>Handheld personal safety device combining taser, dazzler laser, siren, and protective shield in a single compact form.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2026/00344</div>
+        <h3>Grey Water Recycling System</h3>
+        <p>Passive, gravity-fed, retrofit grey water recycling for resource-constrained residential environments — no electricity or pump required.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2026/00555</div>
+        <h3>BioGuard-SA Livestock Diagnostics</h3>
+        <p>Low-cost, AI-enabled rapid diagnostic and digital surveillance system for Foot-and-Mouth Disease and Avian Influenza in smallholder livestock farming.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2026/04173</div>
+        <h3>TermiAqua PVT Panel</h3>
+        <p>Quantum-enhanced biomimetic photovoltaic-thermal panel generating both electricity and atmospheric water from a single installation.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="pt">PT. 2025/10984</div>
+        <h3>StarShield Orbital Debris Remediation Swarm</h3>
+        <p>Quantum-entangled, provably safe autonomous swarm system for the remediation of orbital debris.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Portfolio Outlook</div>
+      <h2>Built for accountable, leveraged development finance.</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">R395.6M</div><div class="stat-label">5-Year Portfolio Revenue</div></div>
+      <div class="stat"><div class="stat-num">8.5×</div><div class="stat-label">Leverage Ratio</div></div>
+      <div class="stat"><div class="stat-num">750–1,720</div><div class="stat-label">5-Year Jobs Projected</div></div>
+      <div class="stat"><div class="stat-num">R0</div><div class="stat-label">Operating Capital to Company</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-lead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Partnership Model Summary</div>
+      <h2>Every payment, named and direct.</h2>
+    </div>
+    <table>
+      <thead><tr><th>Role / Cost Category</th><th>Structure</th><th>Paid To</th></tr></thead>
+      <tbody>
+        <tr><td>Director salary, car &amp; fuel allowance</td><td>R70,000 + R12,000 + R5,000 / month</td><td>Mr PJL Molise, directly</td></tr>
+        <tr><td>Project managers (×4)</td><td>R40,000/month each</td><td>Named PMs, directly</td></tr>
+        <tr><td>Accountant / admin</td><td>R40,000/month, shared</td><td>Named individual, directly</td></tr>
+        <tr><td>General workers (×8)</td><td>R17,000/month each</td><td>Named individuals, directly</td></tr>
+        <tr><td>Engineers, scientists, IP attorneys, labs</td><td>Per-project, milestone-gated</td><td>Service providers, directly</td></tr>
+        <tr><td>Total partnership investment (midpoint)</td><td>36-month programme</td><td>~R46.5M, zero to company</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Let's build what's already been imagined.</h2>
+        <p style="font-style:italic;color:var(--gold);font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:0.03em;margin:-8px 0 22px;">Reliable Work. Real Solutions. Every Day.</p>
+        <a class="email" href="mailto:phehellomo@gmail.com">phehellomo@gmail.com</a>
+        <div class="contact-detail">
+          Phehello Molise Consultants (Pty) Ltd<br>
+          Reg. No. 2024/208180/07<br>
+          1582 Zone 10, Sebokeng, Gauteng, South Africa<br>
+          069 115 9634
+        </div>
+      </div>
+      <div class="contact-detail">
+        <strong style="color:var(--quartz);font-family:'Helvetica Neue',Arial,sans-serif;">Director</strong><br>
+        Mr Phehello Janie Lukas Molise<br>
+        Attorney (ret.) · Crop Farmer · Inventor<br><br>
+        <strong style="color:var(--quartz);font-family:'Helvetica Neue',Arial,sans-serif;">Sectors</strong><br>
+        Security · Energy · Digital Technology · Water &amp; Sanitation · Waste Valorisation
+      </div>
+    </div>
+    <div class="fine">
+      <span>© 2026 Phehello Molise Consultants (Pty) Ltd. 100% Black-Owned · Level 1 B-BBEE.</span>
+      <span>All From Gauteng. All For Gauteng.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
