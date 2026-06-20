@@ -1,0 +1,1 @@
+This is a call for grants or funding for developing, validation, testing, prototyping and commercialisation of our properly researched provisional patents which are reflected herein. The innovations are at concept stage and have great potential. please see our webpage for further information.
